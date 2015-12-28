@@ -1,6 +1,10 @@
 'use strict';
 
-var streets = L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}@2x.png?access_token=pk.eyJ1IjoibXNsZWUiLCJhIjoiclpiTWV5SSJ9.P_h8r37vD8jpIH1A6i1VRg', {
+var mapsmd = L.tileLayer('http://bts{s}.hartamd.com/tiles/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://hartamd.com/">HartaMD.com</a> Data: <a href="http://www.geocoacher.com/" target="_blank">GeoCoacher.com</a>',
+    subdomains: [1,2,3,4]
+  }), 
+  streets = L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}@2x.png?access_token=pk.eyJ1IjoibXNsZWUiLCJhIjoiclpiTWV5SSJ9.P_h8r37vD8jpIH1A6i1VRg', {
     attribution: '<a href="https://www.mapbox.com/about/maps">© Mapbox</a> <a href="http://openstreetmap.org/copyright">© OpenStreetMap</a> | <a href="http://mapbox.com/map-feedback/">Improve this map</a>'
   }),
   outdoors = L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.outdoors/{z}/{x}/{y}@2x.png?access_token=pk.eyJ1IjoibXNsZWUiLCJhIjoiclpiTWV5SSJ9.P_h8r37vD8jpIH1A6i1VRg', {
@@ -19,10 +23,10 @@ var streets = L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x
 
 module.exports = {
   defaultView: {
-    centerLat: 38.8995,
-    centerLng: -77.0269,
-    center: L.latLng(38.8995, -77.0269),
-    zoom: 13,
+    centerLat: 47.01772,
+    centerLng:  28.87207,
+    center: L.latLng(47.01772, 28.87207),
+    zoom: 8,
     waypoints: [],
     language: 'en',
     alternative: true,
@@ -30,9 +34,10 @@ module.exports = {
   },
   services: [{
     label: 'Car (fastest)',
-    path: 'https://api-osrm-routed-production.tilestream.net/viaroute'
+    path: 'http://40.121.90.85:5000/viaroute'
   }],
   layer: [{
+    'maps.md': mapsmd,
     'Mapbox Streets': streets,
     'Mapbox Outdoors': outdoors,
     'Mapbox Streets Satellite': satellite,
@@ -43,6 +48,7 @@ module.exports = {
     'Small Components': small_components
   },
   baselayer: {
+    zero: mapsmd,
     one: streets,
     two: outdoors,
     three: satellite,

@@ -2463,7 +2463,7 @@ function plural(ms, n, name) {
 
 	L.Control.Geocoder.Nominatim = L.Class.extend({
 		options: {
-			serviceUrl: '//nominatim.openstreetmap.org/',
+			serviceUrl: '//geocoder.maps.md/',
 			geocodingQueryParams: {},
 			reverseQueryParams: {},
 			htmlTemplate: function(r) {
