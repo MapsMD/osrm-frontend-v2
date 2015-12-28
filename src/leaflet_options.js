@@ -1,6 +1,6 @@
 'use strict';
 
-var mapsmd = L.tileLayer('http://bts{s}.hartamd.com/tiles/{z}/{x}/{y}.png', {
+var mapsmd = L.tileLayer('http://ts{s}.maps.md/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://hartamd.com/">HartaMD.com</a> Data: <a href="http://www.geocoacher.com/" target="_blank">GeoCoacher.com</a>',
     subdomains: [1,2,3,4]
   }), 
