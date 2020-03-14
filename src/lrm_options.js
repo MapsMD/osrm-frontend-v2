@@ -29,25 +29,26 @@ module.exports = {
     stepClassName: 'osrm-directions-step',
     geocodersClassName: 'osrm-directions-inputs',
     createGeocoder: createGeocoder,
-    itineraryBuilder: 'osrm-directions-steps',
     showAlternatives: true,
-    useZoomParameter: true,
-    routeDragInterval: 100
+    useZoomParameter: false,
+    routeDragInterval: 200,
+    collapsible: true
   },
   popup: {
     removeButtonClass: 'osrm-directions-icon osrm-close-light-icon',
     uturnButtonClass: 'osrm-directions-icon osrm-u-turn-icon',
-    markerOptions: {
-    }
   },
   tools: {
     popupWindowClass: 'fill-osrm dark',
     popupCloseButtonClass: 'osrm-directions-icon osrm-close-icon',
     editorButtonClass: 'osrm-directions-icon osrm-editor-icon',
     josmButtonClass: 'osrm-directions-icon osrm-josm-icon',
-    localizationButtonClass: 'osrm-directions-icon osrm-flag-icon',
+    debugButtonClass: 'osrm-directions-icon osrm-debug-icon',
+    mapillaryButtonClass: 'osrm-directions-icon osrm-mapillary-icon',
+    gpxButtonClass: 'osrm-directions-icon osrm-gpx-icon',
+    localizationChooserClass: 'osrm-localization-chooser',
     printButtonClass: 'osrm-directions-icon osrm-printer-icon',
     toolsContainerClass: 'fill-osrm dark',
-    language: mapView.defaultView.language
+    position: 'bottomleft'
   }
 };

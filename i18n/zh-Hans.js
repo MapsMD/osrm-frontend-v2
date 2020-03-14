@@ -1,6 +1,6 @@
 module.exports = {
-  name: 'English',
-  key: 'en',
+  name: 'Chinese',
+  key: 'zh-Hans',
   'Open in Debug Map': 'Open in Debug Map',
   'Open in Mapillary': 'Open in Mapillary',
   'GPX': 'Export GPX file',
