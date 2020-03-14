@@ -30,7 +30,7 @@ module.exports = {
   },
   services: [{
     label: 'Car (fastest)',
-    path: 'http://router.maps.md/route/v1'
+    path: 'http://routing.maps.md/route/v1'
   }],
   layer: [{
     'Mapbox Streets': streets,
