@@ -34,7 +34,7 @@ module.exports = {
   },
   services: [{
     label: 'Car (fastest)',
-    path: 'http://40.121.90.85:5000/viaroute'
+    path: 'https://routing.maps.md/viaroute'
   }],
   layer: [{
     'maps.md': mapsmd,
