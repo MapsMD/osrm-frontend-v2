@@ -17,6 +17,9 @@ var streets = L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}@
   osm_de = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors'
   }),
+  hartamd = L.tileLayer('http://138.68.83.207:8081/{z}/{x}/{y}.png', {
+    attribution: '© maps.md Lightcyphers SRL'
+  }),
   small_components = L.tileLayer('https://tools.geofabrik.de/osmi/tiles/routing_i/{z}/{x}/{y}.png', {});
 
 module.exports = {
@@ -26,7 +29,7 @@ module.exports = {
     waypoints: [],
     language: 'en',
     alternative: 0,
-    layer: streets
+    layer: hartamd
   },
   services: [{
     label: 'Car (fastest)',
@@ -37,7 +40,8 @@ module.exports = {
     'Mapbox Outdoors': outdoors,
     'Mapbox Streets Satellite': satellite,
     'openstreetmap.org': osm,
-    'openstreetmap.de.org': osm_de
+    'openstreetmap.de.org': osm_de,
+    'hartamd.com': hartamd
   }],
   overlay: {
     'Small Components': small_components
